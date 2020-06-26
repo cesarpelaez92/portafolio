@@ -1,24 +1,35 @@
 import React from 'react';
-import logo from '../logo.svg';
-import './App.css';
+import { makeStyles, Theme } from '@material-ui/core/styles';
+
+import { Home } from './Home';
+import { Footer } from "./Commons/Footer";
+
+const styles = makeStyles((theme: Theme) => ({
+  root: {
+    display: 'grid',
+    width: 'auto',
+    minHeight: '100vh',
+    margin: '0 40px',
+    gridTemplateAreas: `
+    "hd hd hd hd hd hd hd hd hd hd hd hd"
+    "main main main main main main main main main main main main"
+    "ft ft ft ft ft ft ft ft ft ft ft ft"`,
+    gridTemplateColumns: 'repeat(12, 1fr)',
+    gridTemplateRows: '1fr 10fr 1fr',
+    gap: '20px',
+    [theme.breakpoints.down('xs')]: {
+      margin: '0 20px',
+    },
+  }
+}));
 
 function App() {
+  const classes = styles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.root}>
+      <header></header>
+      <Home />
+      <Footer />
     </div>
   );
 }
