@@ -1,5 +1,5 @@
 import React from 'react';
-import Hero from '../../images/hero-about2.jpg';
+
 import { makeStyles, Theme } from '@material-ui/core/styles';
 
 const styles = makeStyles((theme: Theme) => ({
@@ -21,7 +21,6 @@ const styles = makeStyles((theme: Theme) => ({
     flexDirection: 'column',
     justifyContent: 'space-around',
     alignItems: 'flex-start',
-    paddingTop:'30px',
     '& h1': {
       fontWeight: 400,
       color: '#ffffff',
@@ -34,42 +33,55 @@ const styles = makeStyles((theme: Theme) => ({
     '& p': {
       fontSize: '24px',
       marginBottom: '13px',
-      marginRight: '20px',
       color: '#808080',
       [theme.breakpoints.down('xs')]: {
         fontSize: '24px',
       },
     },
+    '& ul': {
+        fontSize: '24px',
+        marginBottom: '13px',
+        color: '#808080',
+        textDecoration: 'none',
+        listStyle: 'none',
+        columns: 2,
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '17px',
+            columns: 1,
+          },
+    }
   },
   hero: {
-    
-    width: '43vmin',
-    height: '90%',
+    width: '40vmin',
+    height: 'auto',
     [theme.breakpoints.down('xs')]: {
       display: 'flex-order',
-      width: '90%',
+      width: '400px',
       height: '250px',
       objectFit: 'cover',
       objectPosition: 'unset'
+      
     },
   }
 }));
 
-export default function About () {
+export default function Skills () {
   const classes = styles();
 
   return (
     <div className={classes.container}>
       <div className={classes.description}>
-          <h1>César Peláez</h1>
-          <p>
-            Tecnologo en analisis y Desarrollo de sistemas de información, <br />
-            En El servicio Nacional de aprendizaje (SENA). <br />
-            Cursos completos de JS y conocimientos En HTML y CSS en Platzi, <br />
-            He trabajado principalmente con React.
-          </p>
+          <h1>MY SKILLS</h1>
+            <ul>
+                <li>- Responsive layouts</li>
+                <li>- HTML 5 and CSS 3</li>
+                <li>- JavaScript, ES6</li>
+                <li>- React</li>
+                <li>- Web Development</li>
+                <li>- SQL y NOSQL</li>
+                <li>- TypeScript</li>
+            </ul>
       </div>
-       <img className={classes.hero} src={Hero} alt="hero-logo" />
     </div>
   );
 }

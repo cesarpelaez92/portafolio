@@ -1,8 +1,9 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { AppRouter } from '../router/AppRouter'
 import { makeStyles, Theme } from '@material-ui/core/styles';
 
 import {Header} from './Commons/Header'
-import { Home } from './Home';
 import { Footer } from "./Commons/Footer";
 
 const styles = makeStyles((theme: Theme) => ({
@@ -28,9 +29,11 @@ function App() {
   const classes = styles();
   return (
     <div className={classes.root}>
-      <Header/>
-      <Home />
-      <Footer />
+      <Router>
+         <Header/>
+          <AppRouter />
+          <Footer />
+      </Router>
     </div>
   );
 }
