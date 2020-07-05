@@ -29,7 +29,7 @@ function App() {
   const classes = styles();
   return (
     <div className={classes.root}>
-      <Router>
+      <Router basename="/portafolio">
          <Header/>
           <AppRouter />
           <Footer />
