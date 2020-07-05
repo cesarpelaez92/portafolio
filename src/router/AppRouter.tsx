@@ -1,7 +1,8 @@
 import React from "react";
 import {
   Switch,
-  Route
+  Route,
+  Redirect
 } from 'react-router-dom';
 import { Home } from "../components/Home";
 import About from "../components/About/About";
@@ -14,7 +15,10 @@ export const  AppRouter = () => {
             <Route path="/about" component={ About }/>
             <Route path="/Experience" component={ Experience }/>
             <Route path="/skills" component={ Skills }/>
-            <Route path="/" component={ Home }/>
+            <Route path="/Home" component={ Home } />
+            <Route path="">
+                  <Redirect to="/home" />
+            </Route> 
         </Switch>
   );
 }
