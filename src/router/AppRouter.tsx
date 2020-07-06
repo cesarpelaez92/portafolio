@@ -12,10 +12,10 @@ import Skills from "../components/Skills/Skills";
 export const  AppRouter = () => {
   return (
         <Switch>
-            <Route path="/about" component={ About }/>
-            <Route path="/Experience" component={ Experience }/>
-            <Route path="/skills" component={ Skills }/>
-            <Route path="/Home" component={ Home } />
+            <Route path="/portafolio/about" component={ About }/>
+            <Route path="/portafolio/Experience" component={ Experience }/>
+            <Route path="/portafolio/skills" component={ Skills }/>
+            <Route path="/portafolio/Home" component={ Home } />
             <Route path="">
                   <Redirect to="/home" />
             </Route> 
