@@ -90,22 +90,22 @@ export default function Header() {
         onClose={() => setIsOpen(!isOpen)}
       >
         <StyledMenuItem>
-          <a href="/" className={classes.a}>
+          <a href="/portafolio" className={classes.a}>
             Home
           </a>
         </StyledMenuItem>
         <StyledMenuItem>
-          <a href="/about" className={classes.a}>
+          <a href="/portafolio/about" className={classes.a}>
             About Me
           </a>
         </StyledMenuItem>
         <StyledMenuItem>
-          <a href="/experience" className={classes.a}>
+          <a href="/portafolio/experience" className={classes.a}>
             Experience
           </a>
         </StyledMenuItem>
         <StyledMenuItem>
-          <a href="/skills" className={classes.a}>
+          <a href="/portafolio/skills" className={classes.a}>
             Skills
           </a>
         </StyledMenuItem>
